@@ -1,25 +1,25 @@
 #include <stdio.h>
 
 /**
- * main - Prints the numbers from 00 to 99, numbers separated by
- *        a comma followed by a space, in ascending order.
+ * main - Function to print all possible combinations of two different digits,
+ *        in ascending order, separated by a comma followed by a space.
  *
  * Return: Always 0.
  */
+
 int main(void)
 {
-	int digit1, digit2;
+	int a, b;
 
-	for (digit1 = 0; digit1 < 10; digit1++)
+	for (a = 0; a < 9; a++)
 	{
-		for (digit2 = 0; digit2 < 10; digit2++)
+		for (b = a + 1; b < 10; b++)
 		{
-			putchar((digit1 % 10) + '0');
-			putchar((digit2 % 10) + '0');
+			putchar((a % 10) + '0');
+			putchar((b % 10) + '0');
 
-			if (digit1 == 9 && digit2 == 9)
+			if (a == 8 && b == 9)
 				continue;
-			
 			putchar(',');
 			putchar(' ');
 		}
