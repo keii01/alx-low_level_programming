@@ -1,33 +1,19 @@
 #include <stdio.h>
 
 /**
- * main - Function to print all possible combinations of three different
- *digits,in ascending order, separated by a comma followed by a space.
+ * main - Prints the alphabet in lowercase, and then in uppercase.
  *
  * Return: Always 0.
  */
-
 int main(void)
 {
-	int a, b, c;
+	char letter;
 
-	for (a = 0; a < 8; a++)
-	{
-		for (b = a + 1; b < 9; b++)
-		{
-			for (c = b + 1; c < 10; c++)
-			{
-				putchar((a % 10) + '0');
-				putchar((b % 10) + '0');
-				putchar((c % 10) + '0');
+	for (letter = 'a'; letter <= 'z'; letter++)
+		putchar(letter);
 
-				if (a == 7 && b == 8 && c == 9)
-					continue;
-				putchar(',');
-				putchar(' ');
-			}
-		}
-	}
+	for (letter = 'A'; letter <= 'Z'; letter++)
+		putchar(letter);
 
 	putchar('\n');
 
