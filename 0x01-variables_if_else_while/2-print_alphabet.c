@@ -1,29 +1,16 @@
 #include <stdio.h>
 
 /**
- * main - Function to print all possible combinations of two different digits,
- *        in ascending order, separated by a comma followed by a space.
+ * main - Prints the alphabet in lowercase.
  *
  * Return: Always 0.
  */
-
 int main(void)
 {
-	int a, b;
+	char letter;
 
-	for (a = 0; a < 9; a++)
-	{
-		for (b = a + 1; b < 10; b++)
-		{
-			putchar((a % 10) + '0');
-			putchar((b % 10) + '0');
-
-			if (a == 8 && b == 9)
-				continue;
-			putchar(',');
-			putchar(' ');
-		}
-	}
+	for (letter = 'a'; letter <= 'z'; letter++)
+		putchar(letter);
 
 	putchar('\n');
 
