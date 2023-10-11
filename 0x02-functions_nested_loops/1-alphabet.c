@@ -1,19 +1,16 @@
-#include <stdio.h>
-#include "main.h"
+#include"main.h"
 
 /**
- * print_alphabet_x10 - print alphabet x 10 in lowercase
+ * print_alphabet - utilizes on the _putchar fuction fuction to print
+ * the alphabet a - z
  */
 
-void print_alphabet_x10(void)
+void print_alphabet(void)
 {
-	int count = 0;
-	char letter;
+	int ch;
 
-	while (count++ <= 9)
-	{
-		for (letter = 'a'; letter <= 'z'; letter++)
-			_putchar(letter);
-		_putchar('\n');
-	}
+	for (ch = 'a'; ch <= 'z'; ch++)
+		_putchar(ch);
+	_putchar('\n');
+
 }
